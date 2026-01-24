@@ -1,0 +1,26 @@
+[
+    {
+        "label": "About Me",
+        "url": "#about"
+    },
+    {
+        "label": "Skills",
+        "url": "#skills"
+    },
+    {
+        "label": "Projects",
+        "url": "#projects"
+    },
+    {
+        "label": "Education",
+        "url": "#education"
+    },
+    {
+        "label": "Certificates",
+        "url": "#certificates"
+    },
+    {
+        "label": "Contact Me",
+        "url": "#contact"
+    }
+]

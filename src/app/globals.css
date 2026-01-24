@@ -1,0 +1,336 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ==========================================================================
+   TAILWIND CONFIG
+   ========================================================================== */
+
+/* default border color */
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
+
+    /* dark mode border color */
+    .dark *,
+    .dark ::after,
+    .dark ::before,
+    .dark ::backdrop,
+    .dark ::file-selector-button {
+        border-color: var(--color-gray-800, currentColor);
+    }
+}
+
+/* customise container utility */
+@utility container {
+    margin-inline: auto;
+    @apply ps-4 pe-4 sm:ps-6 sm:pe-6 md:ps-8 md:pe-8;
+}
+
+@theme {
+    /* how to customise default font stack */
+    --font-sans: "Satoshi", sans-serif;
+
+    /* example of how to customise default color palette */
+    --color-gray-50: oklch(98.42% 0.003 247.86);
+    --color-gray-100: oklch(96.83% 0.007 247.9);
+    --color-gray-200: oklch(92.88% 0.013 255.51);
+    --color-gray-300: oklch(86.9% 0.02 252.89);
+    --color-gray-400: oklch(71.07% 0.035 256.79);
+    --color-gray-500: oklch(55.44% 0.041 257.42);
+    --color-gray-600: oklch(44.55% 0.037 257.28);
+    --color-gray-700: oklch(37.17% 0.039 257.29);
+    --color-gray-800: oklch(27.95% 0.037 260.03);
+    --color-gray-900: oklch(20.77% 0.04 265.75);
+    --color-gray-950: oklch(12.96% 0.027 261.69);
+}
+
+/* example of how to customise the typography plugin settings */
+.prose-gray {
+    --tw-prose-headings: var(--color-gray-950);
+    --tw-prose-body: var(--color-gray-800);
+}
+.dark .prose-gray {
+    --tw-prose-headings: var(--color-gray-200);
+    --tw-prose-body: var(--color-gray-300);
+}
+
+/* ==========================================================================
+   BUTTON STYLES
+   ========================================================================== */
+
+.btn {
+    @apply px-6 py-4 text-white rounded-full bg-gray-950 border-2 border-transparent font-semibold transition-all hover:bg-white hover:text-gray-950 hover:border-gray-950 duration-300 no-underline dark:bg-gray-200 dark:text-gray-950 dark:border-gray-200 dark:hover:bg-gray-300 dark:hover:border-gray-300 cursor-pointer;
+}
+
+.btn-light {
+    @apply bg-white dark:bg-gray-200 text-gray-950 hover:text-gray-600 hover:bg-white/90 dark:hover:bg-gray-300;
+}
+
+.btn-sm {
+    @apply px-5 py-2;
+}
+
+/* ==========================================================================
+   NAVBAR STYLES
+   ========================================================================== */
+
+@layer components {
+    .navlink {
+        @apply font-medium relative dark:text-gray-200;
+    }
+    .navlink:hover::after {
+        @apply scale-x-100;
+    }
+
+    .navlink::after {
+        @apply absolute w-full h-[2px] bottom-[-10px] left-0 bg-current scale-x-0 origin-center transition-transform duration-300;
+        content: "";
+    }
+}
+
+/* ==========================================================================
+   MOBILE MENU STYLES
+   ========================================================================== */
+
+dialog {
+    --modal-transition-in: cubic-bezier(0.65, 0.14, 0.14, 0.91);
+    --modal-transition-out: cubic-bezier(0.98, 0.03, 0.66, 0.9);
+
+    inset: 0;
+    max-width: none;
+    width: 100%;
+    max-height: none;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+}
+
+.modal-close {
+    opacity: 0;
+    transition: opacity var(--modal-transition-out) 0.2s;
+}
+
+.modal-content {
+    transform: translateX(-100%);
+    transition: transform var(--modal-transition-out) 0.4s;
+}
+
+dialog.open .modal-content {
+    transform: translateX(0);
+    transition: transform var(--modal-transition-in) 0.4s;
+}
+
+dialog.open .modal-close {
+    opacity: 1;
+    transition: opacity var(--modal-transition-out) 0.2s 0.7s;
+}
+
+.modal-content {
+    container-type: size;
+    container-name: mobile-menu-left;
+}
+
+@container mobile-menu-left (max-height: 599px) {
+    .mobile-copyright {
+        display: none !important;
+    }
+}
+
+dialog::backdrop {
+    background: transparent;
+}
+
+/* ANIMATIONS  */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-timeline: --page-scroll;
+    }
+
+    .animate {
+        animation-timeline: view();
+        animation-timing-function: cubic-bezier(0.65, 0.14, 0.14, 0.91);
+        animation-delay: 20s;
+    }
+
+    .animate-out-up {
+        animation-name: fadeOutUp;
+        animation-range: exit -100%;
+    }
+
+    .animate-scroll-progress {
+        animation: scrollProgress linear;
+        animation-timeline: --page-scroll;
+        transform-origin: 0 50%;
+    }
+
+    .animate-opacity {
+        animation-name: opacity;
+        animation-range: entry 10% cover 90%;
+    }
+
+    .animate-reveal {
+        view-timeline-name: --reveal-element;
+        view-timeline-axis: block;
+        animation: linear reveal both;
+        animation-timeline: --reveal-element;
+        animation-range: entry 25% cover 50%;
+    }
+
+    .animate-in-and-out {
+        animation: linear inAndOut;
+        animation-timeline: view();
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        clip-path: inset(45% 20% 45% 20%);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%);
+    }
+}
+
+@keyframes inAndOut {
+    entry 0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    entry 180% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    exit 0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    exit 100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes scrollProgress {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-50%);
+    }
+}
+
+/* ==========================================================================
+   UTILITIES
+   ========================================================================== */
+
+@layer utilities {
+    .animated-border {
+        @apply rounded-full bg-white dark:bg-gray-200 dark:text-gray-950 border flex px-3 py-2 font-semibold text-sm mx-auto relative;
+    }
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    .animated-border::after {
+        @apply absolute h-full w-[102.5%] z-[-1] p-5 rounded-full;
+        content: "";
+        background-image: conic-gradient(
+            from var(--angle),
+            transparent 60%,
+            var(--color-green-500)
+        );
+        inset: -2px;
+        animation: 2s infinite rotate linear;
+    }
+
+    .dark .animated-border::after {
+        background-image: conic-gradient(
+            from var(--angle),
+            transparent 90%,
+            var(--color-green-200)
+        );
+    }
+
+    @keyframes rotate {
+        0% {
+            --angle: 0deg;
+        }
+        100% {
+            --angle: 360deg;
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .dotted-side-borders {
+            @apply relative;
+        }
+
+        .dotted-side-borders::before,
+        .dotted-side-borders::after {
+            @apply absolute w-[1px] top-0 bottom-0 right-0;
+            content: "";
+            background-image: linear-gradient(
+                to bottom,
+                var(--color-gray-200),
+                transparent 90%
+            );
+            background-size: 90% 10px;
+            mask-image: linear-gradient(
+                to bottom,
+                transparent 20%,
+                var(--color-gray-200)
+            );
+        }
+
+        .dotted-side-borders::before {
+            @apply right-auto left-0;
+        }
+
+        .dark .dotted-side-borders::before,
+        .dark .dotted-side-borders::after {
+            background-image: linear-gradient(
+                to bottom,
+                var(--color-gray-800),
+                transparent 90%
+            );
+            mask-image: linear-gradient(
+                to bottom,
+                transparent 20%,
+                var(--color-gray-800)
+            );
+        }
+    }
+}

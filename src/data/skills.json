@@ -1,0 +1,78 @@
+[
+    {
+        "name": "JavaScript",
+        "icon": "/icons/Javascript.svg"
+    },
+    {
+        "name": "HTML",
+        "icon": "/icons/html.svg"
+    },
+    {
+        "name": "CSS",
+        "icon": "/icons/css.svg"
+    },
+    {
+        "name": "Tailwind CSS",
+        "icon": "/icons/Tailwind.svg"
+    },
+    {
+        "name": "React",
+        "icon": "/icons/React.svg"
+    },
+    {
+        "name": "Redux Toolkit",
+        "icon": "/icons/Redux.svg"
+    },
+    {
+        "name": "Next.js",
+        "icon": "/icons/Next.svg"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "/icons/Typescript.svg"
+    },
+    {
+        "name": "Node.js",
+        "icon": "/icons/Node.svg"
+    },
+    {
+        "name": "Express.js",
+        "icon": "/icons/express.svg"
+    },
+    {
+        "name": "MongoDB",
+        "icon": "/icons/Mongo.svg"
+    },
+    {
+        "name": "Redis",
+        "icon": "/icons/Redis.svg"
+    },
+    {
+        "name": "Git",
+        "icon": "/icons/Git.svg"
+    },
+    {
+        "name": "GitHub",
+        "icon": "/icons/github.svg"
+    },
+    {
+        "name": "Docker",
+        "icon": "/icons/Docker.svg"
+    },
+    {
+        "name": "Figma",
+        "icon": "/icons/figma.svg"
+    },
+    {
+        "name": "Postman",
+        "icon": "/icons/Postman.svg"
+    },
+    {
+        "name": "VS Code",
+        "icon": "/icons/vscode.svg"
+    },
+    {
+        "name": "Linux",
+        "icon": "/icons/Linux.svg"
+    }
+]

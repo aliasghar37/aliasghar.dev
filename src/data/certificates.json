@@ -1,0 +1,20 @@
+[
+    {
+        "title": "IBM Full-Stack JavaScript Developer",
+        "institute": "IBM",
+        "image": "/images/ibm-fullstack-javascript.webp",
+        "link": "https://coursera.org/verify/professional-cert/YQHS957ISQ8P"
+    },
+    {
+        "title": "Meta Front-End Developer",
+        "institute": "Meta",
+        "image": "/images/meta-frontend.webp",
+        "link": "https://coursera.org/verify/professional-cert/4DSBU9P9XMTC"
+    },
+    {
+        "title": "Google IT Support",
+        "institute": "Google",
+        "image": "/images/google-it-support.webp",
+        "link": "https://coursera.org/verify/professional-cert/E76494WFU6ED"
+    }
+]
