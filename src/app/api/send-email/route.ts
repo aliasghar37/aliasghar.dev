@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { TransactionalEmailsApi, SendSmtpEmail } from "@getbrevo/brevo";
 import { NextRequest, NextResponse } from "next/server";
@@ -14,18 +15,17 @@ export async function POST(req: NextRequest) {
         const body: RequestBody = await req.json();
 
         const emailAPI: any = new TransactionalEmailsApi();
-        emailAPI.authentications.apiKey.apiKey =
-            process.env.NEXT_PUBLIC_BREVO_API;
+        emailAPI.authentications.apiKey.apiKey = process.env.BREVO_API;
 
         const message = new SendSmtpEmail();
         message.sender = {
             name: "Portfolio Contact Form",
-            email: process.env.NEXT_PUBLIC_SENDER_EMAIL,
+            email: process.env.SENDER_EMAIL,
         };
         message.to = [
             {
-                email: process.env.NEXT_PUBLIC_RECIPIENT_EMAIL as string,
-                name: process.env.NEXT_PUBLIC_RECIPIENT_NAME as string,
+                email: process.env.RECIPIENT_EMAIL as string,
+                name: process.env.RECIPIENT_NAME as string,
             },
         ];
         message.subject = body.subject;
@@ -35,14 +35,7 @@ export async function POST(req: NextRequest) {
             name: body.name,
         };
 
-        emailAPI
-            .sendTransacEmail(message)
-            .then((res: any) => {
-                console.log(JSON.stringify(res.body));
-            })
-            .catch((err: any) => {
-                console.error("Error sending email:", err.body);
-            });
+        await emailAPI.sendTransacEmail(message);
 
         return NextResponse.json(
             { message: "Email sent successfully" },

@@ -93,7 +93,6 @@ const ProjectsSection: React.FC = () => {
                                                     {item.website ? (
                                                         <a
                                                             href={item.website}
-                                                            aria-placeholder="Live Demo"
                                                             className="btn mb-10 flex items-center gap-2 justify-self-start justify-center sm:w-auto "
                                                             role="button"
                                                             title="Live Demo"
