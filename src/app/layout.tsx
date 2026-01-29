@@ -4,12 +4,13 @@ import { Providers } from "./providers";
 import { AlertProvider } from "@/components/AlertContext";
 
 export const metadata: Metadata = {
-    title: "Ali Asghar Portfolio",
+    title: "Ali Asghar | Full-Stack Software Developer Portfolio",
     description:
-        "Clean, thoughtful, user-focused web development portfolio. Full-Stack Software Developer passionate about creating dynamic, intuitive and user-centeric web applications.",
+        "Professional portfolio of Ali Asghar, a Full-Stack Software Developer specializing in MERN Stack and Next.js. Building clean, user-focused, and dynamic web applications.",
     icons: {    
         icon: "/images/favicon.png",
     },
+    keywords: ["Ali Asghar", "MERN Stack Developer", "Software Engineer", "Web Developer", "Portfolio", "Freelance", "Pakistan" ],
 };
 
 const themeScript = `
