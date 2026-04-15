@@ -17,7 +17,7 @@ const AboutSection: React.FC = () => {
                             <span className="animate animate-opacity text-gray-600 dark:text-gray-400">
                                 <br />
                                 with a growing specialization in AI-powered
-                                applications using RAG, AI SDK and LangChain.{" "}
+                                applications using LangChain, LangGraph and RAG.{" "}
                                 Passionate about bridging the gap between
                                 backend architecture and intuitive user
                                 experiences.

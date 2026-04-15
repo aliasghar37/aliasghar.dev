@@ -1,9 +1,30 @@
 [
     {
-        "image": "/images/natours-project.png",
+        "image": "/images/linkest-project.webp",
+        "title": "Linkest: Intelligent URL Shortener",
+        "description": "A high-speed link shortener designed to boost brand identity with custom aliases and automated AI-generated summaries for enhanced link previews. It also allows to protect links using secure passwords, auto expiry and automatic QR code generation. The platform also delivers a dashboard with analytics showing daily, monthly, and total clicks on links. The system provides a seamless user experience with high-speed redirection logic and an integrated subscription model for professional-tier features",
+        "website": "https://linkest.vercel.app",
+        "github": "https://github.com/aliasghar37/linkest",
+        "meta": [
+            {
+                "name": "category",
+                "value": "Web Development"
+            },
+            {
+                "name": "tags",
+                "value": "Web Development, Full Stack Development, AI Engineering"
+            },
+            {
+                "name": "Tech Stack",
+                "value": "Next.js, Redis (Upstash), MongoDB, Clerk, Stripe, Tailwind CSS, MUI"
+            }
+        ]
+    },
+    {
+        "image": "/images/natours-project.webp",
         "title": "Natours: Tour Booking Application",
         "description": "A comprehensive tour booking solution focused on secure user workflows and seamless transaction handling. It features a complete authentication system with JWT-based session management, password resets, and role-based access control for administrative tasks. Users can explore detailed itineraries with geolocation data, submit ratings, and securely book adventures via an integrated Stripe payment gateway. The platform is architected as a robust RESTful API, ensuring efficient data management for tours, reviews, and bookings.",
-        "website": "natours-ali.vercel.app",
+        "website": "https://natours-ali.vercel.app",
         "github": "https://github.com/aliasghar37/natours",
         "meta": [
             {
@@ -21,47 +42,7 @@
         ]
     },
     {
-        "image": "/images/forkify-project.png",
-        "title": "Forkify: Recipe Application",
-        "description": "An interactive recipe management SPA that allows users to search, customize, and save culinary content. It leverages a third-party API to provide detailed ingredient lists and cooking times, with a dynamic logic system to adjust quantities based on serving sizes. The application is built with a modular JavaScript architecture, supporting advanced features like recipe bookmarking and user-driven recipe uploads.",
-        "website": "https://forkifyrecipe-ali.netlify.app/",
-        "github": "https://github.com/aliasghar37/forkify",
-        "meta": [
-            {
-                "name": "category",
-                "value": "Web Development"
-            },
-            {
-                "name": "tags",
-                "value": "Web Development, Frontend Development"
-            },
-            {
-                "name": "Tech Stack",
-                "value": "JavaScript, HTML, CSS"
-            }
-        ]
-    },
-    {
-        "image": "/images/ventura-project.png",
-        "title": "Ventura: Personal Finance Service Platform",
-        "description": "A modern UI/UX design project for a fictional finance service focused on simplifying personal and team wealth management. The project features a comprehensive design system with reusable components to ensure visual consistency across a fully responsive web experience. Key deliverables include optimized layouts for home, product, and pricing pages, tailored for both desktop and mobile interfaces.",
-        "meta": [
-            {
-                "name": "category",
-                "value": "UI/UX Design"
-            },
-            {
-                "name": "tags",
-                "value": "Web Design, UI/UX Design, Figma Design"
-            },
-            {
-                "name": "Tech Stack",
-                "value": "Figma"
-            }
-        ]
-    },
-    {
-        "image": "/images/pizzeria-project.png",
+        "image": "/images/pizzeria-project.webp",
         "title": "Pizzeria: Pizza Delivery Application",
         "description": "A feature-rich React application providing a seamless e-commerce experience from menu browsing to secure checkout. It integrates react-leaflet for interactive branch location mapping and react-credit-cards-2 for a modern, real-time visual payment interface. Managed with Redux or React State and styled with Tailwind CSS, it ensures smooth navigation and full responsiveness for mobile and desktop users.",
         "website": "https://aliasghar37.github.io/pizzeria/",
@@ -82,7 +63,47 @@
         ]
     },
     {
-        "image": "/images/weatherwhiz-project.png",
+        "image": "/images/forkify-project.webp",
+        "title": "Forkify: Recipe Application",
+        "description": "An interactive recipe management SPA that allows users to search, customize, and save culinary content. It leverages a third-party API to provide detailed ingredient lists and cooking times, with a dynamic logic system to adjust quantities based on serving sizes. The application is built with a modular JavaScript architecture, supporting advanced features like recipe bookmarking and user-driven recipe uploads.",
+        "website": "https://forkifyrecipe-ali.netlify.app/",
+        "github": "https://github.com/aliasghar37/forkify",
+        "meta": [
+            {
+                "name": "category",
+                "value": "Web Development"
+            },
+            {
+                "name": "tags",
+                "value": "Web Development, Frontend Development"
+            },
+            {
+                "name": "Tech Stack",
+                "value": "JavaScript, HTML, CSS"
+            }
+        ]
+    },
+    {
+        "image": "/images/ventura-project.webp",
+        "title": "Ventura: Personal Finance Service Platform",
+        "description": "A modern UI/UX design project for a fictional finance service focused on simplifying personal and team wealth management. The project features a comprehensive design system with reusable components to ensure visual consistency across a fully responsive web experience. Key deliverables include optimized layouts for home, product, and pricing pages, tailored for both desktop and mobile interfaces.",
+        "meta": [
+            {
+                "name": "category",
+                "value": "UI/UX Design"
+            },
+            {
+                "name": "tags",
+                "value": "Web Design, UI/UX Design, Figma Design"
+            },
+            {
+                "name": "Tech Stack",
+                "value": "Figma"
+            }
+        ]
+    },
+    {
+        "image": "/images/weatherwhiz-project.webp",
         "title": "WeatherWhiz: Weather Application",
         "description": "A minimal, responsive single-page application that provides real-time weather data and multi-day forecasts. It features a streamlined search interface for global locations, delivering essential metrics like humidity, wind speed, and temperature. The project focuses on clean UI design and efficient asynchronous data fetching to ensure a fast, user-friendly experience across all devices.",
         "website": "https://aliasghar37.github.io/weatherwhiz",

@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
                                 <figure className="relative w-32 h-32 mx-auto grid !mb-0 animate animate-out-up">
                                     <Image
                                         src="/images/avatar.png"
-                                        alt="Ali's profile" 
+                                        alt="Ali's profile"
                                         width={128}
                                         height={128}
                                         className="rounded-full"
@@ -56,9 +56,10 @@ const HeroSection: React.FC = () => {
                                 </h1>
                                 <p className="!mb-0 !mt-0 max-w-lg mx-auto text-xl font-medium">
                                     Based in Pakistan, I am a{" "}
-                                    <b>Full-Stack Software Developer</b>{" "}
-                                    passionate about creating dynamic, intuitive
-                                    and user-centeric web applications.
+                                    <b>Full-Stack Software Engineer</b>{" "}
+                                    passionate about creating dynamic,
+                                    intuitive, user-centeric and AI-powered web
+                                    applications.
                                 </p>
                                 <div className="flex flex-col sm:flex-row mx-auto gap-4">
                                     {/* <a
