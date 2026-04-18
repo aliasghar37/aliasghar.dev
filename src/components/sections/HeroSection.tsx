@@ -25,15 +25,15 @@ const HeroSection: React.FC = () => {
         >
             <div className="container">
                 <div className="lg:border-x pt-44">
-                    <div className="lg:max-w-screen-lg lg:mx-auto dotted-side-borders pb-20">
-                        <div className="lg:max-w-screen-md lg:mx-auto grid text-center gap-10 isolate">
+                    <div className="lg:max-w-5xl lg:mx-auto dotted-side-borders pb-20">
+                        <div className="lg:max-w-3xl lg:mx-auto grid text-center gap-10 isolate">
                             <div className="grid">
                                 <span className="animated-border">
                                     Available for work 🎉
                                 </span>
-                                <figure className="relative w-32 h-32 mx-auto grid !mb-0 animate animate-out-up">
+                                <figure className="relative w-32 h-32 mx-auto grid mb-0! animate animate-out-up">
                                     <Image
-                                        src="/images/avatar.png"
+                                        src="/images/avatar.webp"
                                         alt="Ali's profile"
                                         width={128}
                                         height={128}
@@ -44,21 +44,21 @@ const HeroSection: React.FC = () => {
                                 </figure>
                             </div>
                             <div className="grid gap-7 animate animate-out-up">
-                                <p className="!my-0 text-xl">
+                                <p className="my-0! text-xl">
                                     Hi, I&apos;m Ali Asghar 👋
                                 </p>
                                 <h1
                                     id="hero-title"
-                                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black !m-0"
+                                    className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black m-0!"
                                 >
                                     Clean, thoughtful, user-focused web
                                     development
                                 </h1>
-                                <p className="!mb-0 !mt-0 max-w-lg mx-auto text-xl font-medium">
+                                <p className="mb-0! mt-0! max-w-lg mx-auto text-xl font-medium">
                                     Based in Pakistan, I am a{" "}
-                                    <b>Full-Stack Software Engineer</b>{" "}
-                                    passionate about creating dynamic,
-                                    intuitive, user-centeric and AI-powered web
+                                    <b>Software & AI Engineer</b> passionate
+                                    about creating dynamic, intuitive,
+                                    user-centeric and AI-powered web
                                     applications.
                                 </p>
                                 <div className="flex flex-col sm:flex-row mx-auto gap-4">

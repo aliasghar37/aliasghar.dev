@@ -1,16 +1,37 @@
 import type { Metadata } from "next";
+// @ts-ignore
 import "./globals.css";
 import { Providers } from "./providers";
 import { AlertProvider } from "@/components/AlertContext";
 
 export const metadata: Metadata = {
-    title: "Ali Asghar | Full-Stack Software Developer Portfolio",
+    title: "Ali Asghar | Software & AI Engineer",
     description:
-        "Professional portfolio of Ali Asghar, a Full-Stack Software Developer specializing in MERN Stack and Next.js. Building clean, user-focused, and dynamic web applications.",
-    icons: {    
+        "Ali Asghar is a software & AI engineer specialized in MERN Stack, Next.js, LangChain, LangGraph & RAG. Building clean, user-focused, dynamic and AI-powered web applications.",
+    alternates: { canonical: "https://www.aliasghar.dev" },
+    icons: {
         icon: "/images/favicon.png",
     },
-    keywords: ["Ali Asghar", "MERN Stack Developer", "Software Engineer", "Web Developer", "Portfolio", "Freelance", "Pakistan" ],
+    keywords: [
+        "Ali Asghar",
+        "Software Engineer",
+        "AI Engineer",
+        "MERN Stack Developer",
+        "Next.js Developer",
+        "LangChain",
+        "LangGraph",
+        "Portfolio",
+        "Freelance",
+        "Pakistan",
+    ],
+    openGraph: {
+        title: "Ali Asghar | Software & AI Engineer",
+        description:
+            "Building clean, user-focused, and AI-powered web applications.",
+        url: "https://www.aliasghar.dev",
+        siteName: "Ali Asghar Portfolio",
+        type: "website",
+    },
 };
 
 const themeScript = `
