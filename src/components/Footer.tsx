@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { FC } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import Socials from "./Socials";
@@ -16,7 +16,7 @@ const getResumeUrl = async () => {
     return publicUrl;
 };
 
-const Footer: React.FC = () => {
+const Footer: FC = () => {
     const menuItems: NavItem[] = menuData;
 
     const handleResumeDownload = async () => {
@@ -32,18 +32,18 @@ const Footer: React.FC = () => {
         <footer className="dark:bg-gray-950" id="contact">
             <div className="container">
                 <div className="lg:border-x py-32">
-                    <div className="lg:max-w-screen-lg lg:mx-auto dotted-side-borders">
+                    <div className="lg:max-w-5xl lg:mx-auto dotted-side-borders">
                         <div className="grid lg:grid-cols-2 px-2 gap-12 ">
                             {/* Get in touch */}
-                            <div className="lg:max-w-screen-md lg:mx-auto grid gap-8 max-lg:-mt-20 ">
+                            <div className="lg:max-w-3xl lg:mx-auto grid gap-8 max-lg:-mt-20 ">
                                 <div className="grid gap-10 text-center animate animate-out-up">
-                                    <h2 className="!mb-0">Get In Touch</h2>
+                                    <h2 className="mb-0!">Get In Touch</h2>
                                     <p className="-mb-10 max-w-lg mx-auto px-4 ">
                                         Ready to bring your project to life?
                                         Let&apos;s discuss how we can work
                                         together to create something amazing.
                                     </p>
-                                    <p className="!mb-0 max-w-lg mx-auto">
+                                    <p className="mb-0! max-w-lg mx-auto">
                                         Email: iamaliasghar37@gmail.com
                                     </p>
                                     <div className="flex justify-center gap-4">

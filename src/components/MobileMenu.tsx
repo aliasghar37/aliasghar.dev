@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { FC } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 
@@ -15,11 +15,7 @@ interface MobileMenuProps {
     menuItems: NavItem[];
 }
 
-const MobileMenu: React.FC<MobileMenuProps> = ({
-    isOpen,
-    onClose,
-    menuItems,
-}) => {
+const MobileMenu: FC<MobileMenuProps> = ({ isOpen, onClose, menuItems }) => {
     if (!isOpen) return null;
 
     return (
@@ -28,14 +24,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
             aria-labelledby="modal-title"
             aria-describedby="modal-description"
             data-modal
-            className={`fixed z-[999] ${isOpen ? "open" : ""}`}
+            className={`fixed z-999 ${isOpen ? "open" : ""}`}
             open={isOpen}
         >
             <div className="modal-content bg-white dark:bg-gray-950 justify-between gap-20 p-12 sm:p-20 flex flex-col h-full overflow-y-auto">
                 <div className="flex items-center justify-between gap-4 ">
                     <Link
                         href="/"
-                        className="w-14 sm:w-20 flex flex-shrink-0 transition-opacity hover:opacity-75 duration-300 text-white dark:text-gray-100"
+                        className="w-14 sm:w-20 flex shrink-0 transition-opacity hover:opacity-75 duration-300 text-white dark:text-gray-100"
                         aria-label="Home"
                     >
                         <Logo />
@@ -75,7 +71,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
                     </ul>
                 </nav>
                 <div className=" text-black/70 dark:text-white/50 mobile-copyright">
-                    <p className="!m-0">
+                    <p className="m-0!">
                         &copy; 2026 All rights reserved | Made with ❤️ by Ali
                         Asghar
                     </p>

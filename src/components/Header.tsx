@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, FC } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import MobileMenu from "./MobileMenu";
@@ -12,16 +12,16 @@ interface NavItem {
     label: string;
 }
 
-const Header: React.FC = () => {
+const Header: FC = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const menuItems: NavItem[] = menuData;
 
     return (
         <>
-            <div className="fixed top-0 left-0 z-[40] shadow bg-gray-950 dark:bg-gray-200 h-1 w-full animate-scroll-progress"></div>
+            <div className="fixed top-0 left-0 z-40 shadow bg-gray-950 dark:bg-gray-200 h-1 w-full animate-scroll-progress"></div>
             <header className="border-b py-4 not-prose fixed inset-x-0 bg-white dark:bg-gray-950 z-30">
                 <div className="container flex justify-between items-center gap-20">
-                    <div className="flex items-center gap-32 flex-grow">
+                    <div className="flex items-center gap-32 grow">
                         <Link
                             href="/"
                             className="w-10 grid transition-opacity hover:opacity-75 duration-300 text-gray-950 dark:text-gray-100"

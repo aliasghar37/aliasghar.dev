@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import socialsData from "@/data/socials.json";
 
 interface SocialLink {
@@ -11,7 +11,7 @@ interface SocialsProps {
     center?: boolean;
 }
 
-const Socials: React.FC<SocialsProps> = ({ center = false }) => {
+const Socials: FC<SocialsProps> = ({ center = false }) => {
     const socialLinks: SocialLink[] = socialsData;
 
     const renderIcon = (iconName: string) => {

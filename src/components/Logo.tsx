@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState, FC } from "react";
 import { useTheme } from "next-themes";
 
-const Logo: React.FC = () => {
+const Logo: FC = () => {
     const { theme } = useTheme();
     const [mounted, setMounted] = useState(false);
 

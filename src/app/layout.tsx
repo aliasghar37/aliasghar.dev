@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Providers } from "./providers";
 import { AlertProvider } from "@/components/AlertContext";
+import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
     title: "Ali Asghar | Software & AI Engineer",
@@ -68,7 +69,10 @@ export default function RootLayout({
             </head>
             <body className="prose prose-gray max-w-none">
                 <Providers>
-                    <AlertProvider>{children}</AlertProvider>
+                    <AlertProvider>
+                        <CustomCursor />
+                        {children}
+                    </AlertProvider>
                 </Providers>
             </body>
         </html>

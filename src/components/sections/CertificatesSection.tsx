@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
 import certificatesData from "../../data/certificates.json";
@@ -10,7 +10,7 @@ interface Certificate {
     link: string;
 }
 
-const CertificatesSection: React.FC = () => {
+const CertificatesSection: FC = () => {
     const certificates: Certificate[] = certificatesData;
 
     return (
@@ -25,7 +25,7 @@ const CertificatesSection: React.FC = () => {
                         id="certificates-title"
                         title="Certificates"
                     />
-                    <div className="lg:max-w-screen-lg lg:mx-auto py-14 lg:py-20">
+                    <div className="lg:max-w-5xl lg:mx-auto py-14 lg:py-20">
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                             {certificates.map((cert, index) => (
                                 <a

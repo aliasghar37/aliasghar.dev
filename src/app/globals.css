@@ -3,9 +3,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ==========================================================================
-   TAILWIND CONFIG
-   ========================================================================== */
+/* TAILWIND CONFIG */
 
 /* default border color */
 @layer base {
@@ -49,9 +47,10 @@
     --color-gray-800: oklch(27.95% 0.037 260.03);
     --color-gray-900: oklch(20.77% 0.04 265.75);
     --color-gray-950: oklch(12.96% 0.027 261.69);
+    --background-image-hero-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23111827' fill-opacity='0.02' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
+    --background-image-hero-pattern-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18' viewBox='0 0 100 18'%3E%3Cpath fill='%23565656' fill-opacity='0.05' d='M61.82 18c3.47-1.45 6.86-3.78 11.3-7.34C78 6.76 80.34 5.1 83.87 3.42 88.56 1.16 93.75 0 100 0v6.16C98.76 6.05 97.43 6 96 6c-9.59 0-14.23 2.23-23.13 9.34-1.28 1.03-2.39 1.9-3.4 2.66h-7.65zm-23.64 0H22.52c-1-.76-2.1-1.63-3.4-2.66C11.57 9.3 7.08 6.78 0 6.16V0c6.25 0 11.44 1.16 16.14 3.42 3.53 1.7 5.87 3.35 10.73 7.24 4.45 3.56 7.84 5.9 11.31 7.34zM61.82 0h7.66a39.57 39.57 0 0 1-7.34 4.58C57.44 6.84 52.25 8 46 8S34.56 6.84 29.86 4.58A39.57 39.57 0 0 1 22.52 0h15.66C41.65 1.44 45.21 2 50 2c4.8 0 8.35-.56 11.82-2z'%3E%3C/path%3E%3C/svg%3E");
 }
 
-/* example of how to customise the typography plugin settings */
 .prose-gray {
     --tw-prose-headings: var(--color-gray-950);
     --tw-prose-body: var(--color-gray-800);
@@ -61,9 +60,7 @@
     --tw-prose-body: var(--color-gray-300);
 }
 
-/* ==========================================================================
-   BUTTON STYLES
-   ========================================================================== */
+/* BUTTON STYLES */
 
 .btn {
     @apply px-6 py-4 text-white rounded-full bg-gray-950 border-2 border-transparent font-semibold transition-all hover:bg-white hover:text-gray-950 hover:border-gray-950 duration-300 no-underline dark:bg-gray-200 dark:text-gray-950 dark:border-gray-200 dark:hover:bg-gray-300 dark:hover:border-gray-300 cursor-pointer;
@@ -77,9 +74,7 @@
     @apply px-5 py-2;
 }
 
-/* ==========================================================================
-   NAVBAR STYLES
-   ========================================================================== */
+/* NAVBAR STYLES */
 
 @layer components {
     .navlink {
@@ -90,14 +85,12 @@
     }
 
     .navlink::after {
-        @apply absolute w-full h-[2px] bottom-[-10px] left-0 bg-current scale-x-0 origin-center transition-transform duration-300;
+        @apply absolute w-full h-0.5 -bottom-2.5 left-0 bg-current scale-x-0 origin-center transition-transform duration-300;
         content: "";
     }
 }
 
-/* ==========================================================================
-   MOBILE MENU STYLES
-   ========================================================================== */
+/* MOBILE MENU STYLES */
 
 dialog {
     --modal-transition-in: cubic-bezier(0.65, 0.14, 0.14, 0.91);
@@ -145,6 +138,88 @@ dialog.open .modal-close {
 
 dialog::backdrop {
     background: transparent;
+}
+
+/* CUSTOM CURSOR */
+.custom-cursor {
+    display: none;
+}
+
+@media (pointer: fine) and (hover: hover) {
+    html.has-custom-cursor,
+    html.has-custom-cursor body,
+    html.has-custom-cursor a,
+    html.has-custom-cursor button,
+    html.has-custom-cursor [role="button"],
+    html.has-custom-cursor [data-cursor="pointer"] {
+        cursor: none !important;
+    }
+
+    html.has-custom-cursor input,
+    html.has-custom-cursor textarea,
+    html.has-custom-cursor [contenteditable="true"] {
+        cursor: text !important;
+    }
+
+    .custom-cursor {
+        display: block;
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 200;
+        opacity: 0;
+        transition: opacity 220ms ease;
+    }
+
+    .custom-cursor.is-visible {
+        opacity: 1;
+    }
+
+    .custom-cursor-dot {
+        position: fixed;
+        top: 0;
+        left: 0;
+        will-change: transform;
+    }
+
+    .custom-cursor-dot {
+        width: 32px;
+        height: 32px;
+        color: var(--color-gray-900);
+        transform: translate3d(
+                var(--cursor-dot-x, -100px),
+                var(--cursor-dot-y, -100px),
+                0
+            )
+            scale(1);
+    }
+
+    .dark .custom-cursor-dot {
+        color: var(--color-gray-100);
+    }
+
+    .custom-cursor-dot svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .custom-cursor.is-pressed .custom-cursor-dot {
+        transform: translate3d(
+                var(--cursor-dot-x, -100px),
+                var(--cursor-dot-y, -100px),
+                0
+            )
+            scale(0.9);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .custom-cursor,
+    .custom-cursor * {
+        transition: none !important;
+        animation: none !important;
+    }
 }
 
 /* ANIMATIONS  */
@@ -249,9 +324,7 @@ dialog::backdrop {
     }
 }
 
-/* ==========================================================================
-   UTILITIES
-   ========================================================================== */
+/* UTILITIES */
 
 @layer utilities {
     .animated-border {
@@ -300,7 +373,7 @@ dialog::backdrop {
 
         .dotted-side-borders::before,
         .dotted-side-borders::after {
-            @apply absolute w-[1px] top-0 bottom-0 right-0;
+            @apply absolute w-px top-0 bottom-0 right-0;
             content: "";
             background-image: linear-gradient(
                 to bottom,

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState, FC } from "react";
 import Image from "next/image";
 import SectionTitle from "../SectionTitle";
 import projectsData from "@/data/projects.json";
@@ -19,7 +19,7 @@ interface ProjectItem {
     meta: ProjectData[];
 }
 
-const ProjectsSection: React.FC = () => {
+const ProjectsSection: FC = () => {
     const projects: ProjectItem[] = projectsData;
     const [visibleCount, setVisibleCount] = useState(3);
 
@@ -38,7 +38,7 @@ const ProjectsSection: React.FC = () => {
             <div className="container">
                 <div className="lg:border-x">
                     <SectionTitle id="projects-title" title="Projects" />
-                    <div className="grid gap-20 max-md:gap-0 lg:mx-auto lg:max-w-screen-lg py-14 lg:py-20">
+                    <div className="grid gap-20 max-md:gap-0 lg:mx-auto lg:max-w-5xl py-14 lg:py-20">
                         {visibleProjects.map((item, index) => (
                             <article key={index}>
                                 <Image

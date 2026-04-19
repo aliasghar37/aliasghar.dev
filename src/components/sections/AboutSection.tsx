@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import SectionTitle from "../SectionTitle";
 
 const AboutSection: React.FC = () => {
@@ -11,8 +11,8 @@ const AboutSection: React.FC = () => {
             <div className="container">
                 <div className="lg:border-x">
                     <SectionTitle id="about-title" title="About Me" />
-                    <div className="lg:max-w-screen-md lg:mx-auto py-14 lg:py-20">
-                        <p className="!m-0 text-3xl lg:text-4xl text-gray-950 dark:text-gray-200 text-center ">
+                    <div className="lg:max-w-3xl lg:mx-auto py-14 lg:py-20">
+                        <p className="m-0! text-3xl lg:text-4xl text-gray-950 dark:text-gray-200 text-center ">
                             Specialized in the MERN Stack and Next.js
                             <span className="animate animate-opacity text-gray-600 dark:text-gray-400">
                                 <br />

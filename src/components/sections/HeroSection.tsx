@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import { FC } from "react";
 import Image from "next/image";
 import Socials from "../Socials";
 
@@ -8,7 +8,7 @@ const getResumeUrl = async () => {
     return publicUrl;
 };
 
-const HeroSection: React.FC = () => {
+const HeroSection: FC = () => {
     const handleResumeDownload = async () => {
         try {
             const url = await getResumeUrl();
@@ -24,7 +24,7 @@ const HeroSection: React.FC = () => {
             className="border-b dark:bg-gray-950"
         >
             <div className="container">
-                <div className="lg:border-x pt-44">
+                <div className="lg:border-x pt-44 bg-hero-pattern dark:bg-hero-pattern-dark bg-repeat">
                     <div className="lg:max-w-5xl lg:mx-auto dotted-side-borders pb-20">
                         <div className="lg:max-w-3xl lg:mx-auto grid text-center gap-10 isolate">
                             <div className="grid">
@@ -51,8 +51,10 @@ const HeroSection: React.FC = () => {
                                     id="hero-title"
                                     className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black m-0!"
                                 >
-                                    Clean, thoughtful, user-focused web
-                                    development
+                                    {/* Clean, thoughtful, user-focused web
+                                    development */}
+                                    Building user-focused and AI-enabled Software
+                                    Applications
                                 </h1>
                                 <p className="mb-0! mt-0! max-w-lg mx-auto text-xl font-medium">
                                     Based in Pakistan, I am a{" "}

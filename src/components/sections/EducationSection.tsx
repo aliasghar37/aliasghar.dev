@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import SectionTitle from "../SectionTitle";
 import educationData from "../../data/education.json";
 
@@ -8,7 +8,7 @@ interface Education {
     institute: string;
 }
 
-const EducationSection: React.FC = () => {
+const EducationSection: FC = () => {
     const education: Education[] = educationData;
 
     return (
@@ -27,8 +27,8 @@ const EducationSection: React.FC = () => {
                                     key={index}
                                     className="border-l pl-8 sm:pl-16 md:pl-24 pb-16 last:pb-0 relative"
                                 >
-                                    <span className="bg-gray-200 dark:bg-gray-400 w-[7px] h-[7px] rounded-full block absolute left-0 top-0 -ml-1"></span>
-                                    <span className="uppercase text-gray-600 dark:text-gray-500 font-medium tracking-wide mb-4 block leading-[1]">
+                                    <span className="bg-gray-200 dark:bg-gray-400 w-1.75 h-1.75 rounded-full block absolute left-0 top-0 -ml-1"></span>
+                                    <span className="uppercase text-gray-600 dark:text-gray-500 font-medium tracking-wide mb-4 block leading-none">
                                         {ed.year}
                                     </span>
                                     <dt className="text-2xl md:text-3xl text-gray-950 dark:text-gray-200 font-medium">

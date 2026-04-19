@@ -114,7 +114,7 @@ const ContactForm = () => {
                             <input
                                 type="text"
                                 id="name"
-                                className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border-1 border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
+                                className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
                                 placeholder="Enter your name"
                                 value={name}
                                 required
@@ -131,7 +131,7 @@ const ContactForm = () => {
                             <input
                                 type="email"
                                 id="email"
-                                className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border-1 border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
+                                className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
                                 placeholder="name@email.com"
                                 value={email}
                                 required
@@ -150,7 +150,7 @@ const ContactForm = () => {
                     <input
                         type="text"
                         id="subject"
-                        className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border-1 border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
+                        className="shadow-lg shadow-black/10  dark:shadow-black/20  bg-gray-50 border border-black/20text-gray-950 text-sm rounded-full block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 "
                         placeholder="Let us know how we can help you"
                         value={subject}
                         required
@@ -167,7 +167,7 @@ const ContactForm = () => {
                     <textarea
                         id="message"
                         rows={3}
-                        className="shadow-lg shadow-black/10 dark:shadow-black/20  bg-gray-50 border-1 border-black/20text-gray-950 text-sm rounded-xl block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 resize-none "
+                        className="shadow-lg shadow-black/10 dark:shadow-black/20  bg-gray-50 border border-black/20text-gray-950 text-sm rounded-xl block w-full p-2.5 dark:bg-gray-950 dark:border-gray-900 dark:placeholder-gray-400 dark:text-white outline-none focus:ring-2 focus:ring-gray-950 dark:focus:ring-gray-700 resize-none "
                         value={comment}
                         placeholder="Leave a comment..."
                         required
